@@ -35,6 +35,7 @@ const typeController = (e) => {
 
   // if it is not a valid character like Control/Alt then skip displaying anything
   if (!validLetters.includes(newLetter)) {
+    errorCount = errorCount + 1;
     return;
   }
 
@@ -89,7 +90,7 @@ const gameOver = () => {
 
   // restart everything
   startTime = null;
-  errorCount = 0;
+  // errorCount = 0;
   userText = "";
   display.classList.add("inactive");
 };
